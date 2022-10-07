@@ -19,6 +19,10 @@ CaixaDeEntrada* ListaCaixaDeEntrada::posiciona(int ID){
     while(p->prox != NULL && p->prox->ID != ID) {
         p = p->prox;
     }
+
+    if(ultimo == p && p->ID != ID) {
+        return NULL;
+    }
     return p;
 }
 

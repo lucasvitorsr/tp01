@@ -5,8 +5,6 @@
 
 #include <iostream>
 
-#define TipoItem int
-
 using namespace std;
 
 class ListaCaixaDeEntrada {
@@ -15,16 +13,16 @@ class ListaCaixaDeEntrada {
         ListaCaixaDeEntrada();
         ~ListaCaixaDeEntrada();
 
-        void insere(TipoItem ID);
+        void insere(int ID);
         bool remove(int ID);
         bool existeId(int ID);
         void limpa();
+        CaixaDeEntrada* posiciona(int ID);
 
     private:
         int tamanho;
         CaixaDeEntrada* primeiro;
         CaixaDeEntrada* ultimo;
-        CaixaDeEntrada* posiciona(int ID);
 };
 
 #endif
